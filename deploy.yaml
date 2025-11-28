@@ -1,0 +1,20 @@
+KIND : Deployment
+API_VERSION : apps/v1
+METADATA :
+  NAME : my-application
+  NAMESPACE : dev
+SPEC :
+  REPLICAS : 3
+  SELECTOR :
+    MATCH_LABELS :
+      APP : my-application
+  TEMPLATE :
+    METADATA :
+      LABELS :
+        APP : my-application  
+    SPEC :
+      CONTAINERS :
+        - NAME : my-application-container
+          IMAGE : 
+          PORTS :
+            - CONTAINER_PORT : 8080

@@ -1,0 +1,13 @@
+KIND : Service
+API_VERSION : v1
+METADATA :
+  NAME : my-application-service
+  NAMESPACE : dev
+SPEC :
+  SELECTOR :
+    APP : my-application
+  PORTS :
+    - PROTOCOL : TCP
+      PORT : 80
+      TARGET_PORT : 8080
+  TYPE : LoadBalancer
