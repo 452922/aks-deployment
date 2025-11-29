@@ -1,0 +1,14 @@
+trigger: none
+pool:
+  name: eric
+stage:
+  stages: build
+  job:
+    jobs:build
+    steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+  
